@@ -1,6 +1,5 @@
 class MyHashTable {
     MyLinkedList<WordEntry> [] hash = new MyLinkedList[26];
-    @SuppressWarnings("unchecked")
     public MyHashTable() {
         for (int i=0; i<26; i++) {
             hash[i] = new MyLinkedList<WordEntry>();
@@ -19,7 +18,9 @@ class MyHashTable {
             if(w.word.equals(temp.data.word)) break;
             temp = temp.next;
         }
-        if (temp==null) myhash.addFirst(w);
+        if (temp==null) { 
+            myhash.addFirst(w);
+        }
         else {
             Node<Position> temp2 = w.word_position.head;
             while(temp2!=null) {

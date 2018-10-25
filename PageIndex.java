@@ -1,4 +1,5 @@
 class PageIndex { // for each page p
+    //
     public MyLinkedList<WordEntry> pi_set = new MyLinkedList<WordEntry>();
     public void addPositionForWord(String str, Position p) {
         Node<WordEntry> temp = pi_set.head;
